@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente para el círculo central -->
+    <linearGradient id="centerBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#258BF5" />
+      <stop offset="100%" stop-color="#1558A8" />
+    </linearGradient>
+
+    <!-- Trayectoria para texto superior (sentido horario por arriba) -->
+    <path id="textArcTop" d="M 65,250 A 185,185 0 0,1 435,250" fill="none" />
+    
+    <!-- Trayectoria para texto inferior (sentido antihorario, de izquierda a derecha por abajo) -->
+    <path id="textArcBottom" d="M 65,250 A 185,185 0 0,0 435,250" fill="none" />
+
+    <!-- Sombra suave exterior -->
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F1B2D" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Anillo exterior decorativo -->
+  <circle cx="250" cy="250" r="240" fill="#FFFFFF" stroke="#1E7FE0" stroke-width="4" filter="url(#badgeShadow)" />
+  <circle cx="250" cy="250" r="232" fill="none" stroke="#F0402F" stroke-width="1.5" opacity="0.3" />
+
+  <!-- Texto Superior: LA CLÍNICA DE LA PC -->
+  <text fill="#F0402F" font-family="'Sora', 'Segoe UI', Arial, sans-serif" font-size="27" font-weight="800" letter-spacing="3.5">
+    <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">
+      LA CLÍNICA DE LA PC
+    </textPath>
+  </text>
+
+  <!-- Puntos separadores decorativos laterales -->
+  <circle cx="62" cy="250" r="4.5" fill="#1E7FE0" />
+  <circle cx="438" cy="250" r="4.5" fill="#1E7FE0" />
+
+  <!-- Texto Inferior: CELULAR / CONTACTO -->
+  <text fill="#F26B3A" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="3">
+    <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">
+      CEL. (387) 15-4829499
+    </textPath>
+  </text>
+
+  <!-- Círculo Central -->
+  <circle cx="250" cy="250" r="142" fill="url(#centerBlueGrad)" stroke="#FFFFFF" stroke-width="5" />
+
+  <!-- Cruz Blanca dentro del círculo central -->
+  <path d="M 214,142 H 286 V 218 H 358 V 282 H 286 V 358 H 214 V 282 H 142 V 218 H 214 Z" 
+        fill="#FFFFFF" 
+        stroke="#FFFFFF" 
+        stroke-linejoin="round" 
+        stroke-width="4" />
+
+  <!-- Texto "SERVICIO TÉCNICO" dentro de la cruz blanca -->
+  <text x="250" y="250" 
+        fill="#1558A8" 
+        font-family="'Sora', 'Segoe UI', Arial, sans-serif" 
+        font-size="15.5" 
+        font-weight="800" 
+        text-anchor="middle" 
+        letter-spacing="2.6" 
+        dominant-baseline="central">
+    SERVICIO TÉCNICO
+  </text>
+</svg>
